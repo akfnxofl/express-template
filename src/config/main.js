@@ -67,7 +67,7 @@ for (let v of process.env.DB_HOST_WRITER.split(",")) {
 
     config.database.connection.writer.push({
         host: hostSplit[0],
-        port: hostSplit[1],
+        port: Number(hostSplit[1]),
     });
 }
 
@@ -78,7 +78,7 @@ for (let v of process.env.DB_HOST_READER.split(",")) {
 
     config.database.connection.reader.push({
         host: hostSplit[0],
-        port: hostSplit[1],
+        port: Number(hostSplit[1]),
     });
 }
 
